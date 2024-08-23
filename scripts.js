@@ -1,5 +1,5 @@
 function getWeather() {
-    const apiKey = '1558dc8376ec092ae8b685a93d6849a7';
+    const API_KEY = '1558dc8376ec092ae8b685a93d6849a7';
     const city = document.getElementById('city').value;
 
     if (!city) {
@@ -7,8 +7,8 @@ function getWeather() {
         return;
     }
 
-    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
-    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
+    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}`;
 
     fetch(currentWeatherUrl)
         .then(response => response.json())
